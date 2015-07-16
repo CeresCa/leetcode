@@ -9,9 +9,4 @@ class Solution:
             n >>= 1
         return ans
 
-if __name__ == "__main__":
-    solution = Solution()
-    print (solution.hammingWeight(11))
 
-#
-#
