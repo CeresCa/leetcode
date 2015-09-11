@@ -7,14 +7,14 @@ class Solution(object):
         :rtype: float
         """
         l = len(nums1) + len(nums2)
-        return self.findKth(nums1, nums2, 1 // 2) if l % 2 == 1 \
+        return self.findKth(nums1, nums2, l // 2) if l % 2 == 1 \
             else (self.findKth(nums1, nums2, l // 2 - 1) +
-                  self.findKth(nums1, nums2, 1 // 2)) / 2.0
+                  self.findKth(nums1, nums2, l // 2)) / 2.0
 
     def findKth(self, nums1, nums2, k):
-        if nums1 is None:
+        if len(nums1) == 0:
             return nums2[k]
-        if nums2 is None:
+        if len(nums2) == 0:
             return nums1[k]
         index1, index2 = len(nums1) // 2, len(nums2) // 2
         median1, median2 = nums1[index1], nums2[index2]
