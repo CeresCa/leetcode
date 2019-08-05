@@ -73,9 +73,9 @@ class H2O:
 
 # 背景
 
-Python中有多种队列实现，比如collections.deque, multiprocessing.Queue,,threading.Queue, asyncio.Queue, heapq等
+Python中有多种队列实现，比如collections.deque, multiprocessing.Queue,,queue.Queue, asyncio.Queue, heapq等
 
-在这里可以使用collections.deque或者threading.Queue。
+在这里可以使用queue.Queue或者threading.Queue。
 
 deque文档说明：
 
