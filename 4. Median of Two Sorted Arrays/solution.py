@@ -1,11 +1,5 @@
-class Solution(object):
-
-    def findMedianSortedArrays(self, nums1, nums2):
-        """
-        :type nums1: List[int]
-        :type nums2: List[int]
-        :rtype: float
-        """
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         l = len(nums1) + len(nums2)
         return self.findKth(nums1, nums2, l // 2) if l % 2 == 1 \
             else (self.findKth(nums1, nums2, l // 2 - 1) +
@@ -23,13 +17,13 @@ class Solution(object):
         # 如果nums1[m/2] > nums2[n/2], 意味着中位数肯定不可能在Section 2里面，那么新的搜索可以丢弃这个区间段了。
         # 同理可以推断出余下三种情况
 
-        if (median1 < median2):
-            if ((index1 + index2) >= k):
+        if median1 < median2:
+            if (index1 + index2) >= k:
                 return self.findKth(nums1, nums2[:index2], k)
             else:
                 return self.findKth(nums1[index1 + 1:], nums2, k - index1 - 1)
         else:
-            if ((index1 + index2) >= k):
+            if (index1 + index2) >= k:
                 return self.findKth(nums1[:index1], nums2, k)
             else:
                 return self.findKth(nums1, nums2[index2 + 1:], k - index2 - 1)
