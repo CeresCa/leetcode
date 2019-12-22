@@ -4,13 +4,13 @@ class Solution:
 
         stack = deque()
         par = {")": "(", "]": "[", "}": "{"}
-        values = par.values()
-        keys = par.keys()
+        left = par.values()
+        right = par.keys()
 
         for c in s:
-            if c in values:
+            if c in left:
                 stack.append(c)
-            elif c in keys:
+            elif c in right:
                 if not stack:
                     return False
                 result = stack.pop()

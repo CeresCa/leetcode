@@ -23,11 +23,11 @@
             l1 = l1.Next 
         }
         curr = curr.Next
-        if l1 != nil{
-            curr.Next = l1
-        } else if l2 != nil{
-            curr.Next = l2
-        }
+    if l1 != nil{
+        curr.Next = l1
+    } else if l2 != nil{
+        curr.Next = l2
+    }
     }
     return head.Next
 }
