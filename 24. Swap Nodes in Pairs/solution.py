@@ -17,4 +17,3 @@ class Solution:
             head = head.next  # 当前节点变成原始链表的下下个
             pair = tmp_next.next  # 跳到下一对未调整的节点对之前
         return dummy.next
-

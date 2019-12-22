@@ -26,4 +26,3 @@ class ZeroEvenOdd:
             self.odd_sem.acquire()
             printNumber(i)
             self.zero_sem.release()
-

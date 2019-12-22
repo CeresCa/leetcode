@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     # @param {TreeNode} root
     # @param {integer} sum
@@ -15,4 +16,6 @@ class Solution:
         elif root.val == sum and root.left is None and root.right is None:
             return True
         else:
-            return self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(root.right, sum - root.val)
+            return self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(
+                root.right, sum - root.val
+            )

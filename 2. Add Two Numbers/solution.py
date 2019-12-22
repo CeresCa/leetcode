@@ -23,4 +23,3 @@ class Solution:
                 current.next = ListNode(0)
                 current = current.next
         return result
-

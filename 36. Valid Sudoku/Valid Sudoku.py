@@ -2,7 +2,11 @@ class Solution:
     # @param {character[][]} board
     # @return {boolean}
     def isValidSudoku(self, board):
-        return self.isValidRow(board) and self.isValidColumn(board) and self.isValidSquare(board)
+        return (
+            self.isValidRow(board)
+            and self.isValidColumn(board)
+            and self.isValidSquare(board)
+        )
 
     def isValidRow(self, board):
         for row in board:
@@ -25,5 +29,5 @@ class Solution:
         return True
 
     def isValidUnit(self, unit):
-        unit = [i for i in unit if i != '.']
+        unit = [i for i in unit if i != "."]
         return len(set(unit)) == len(unit)

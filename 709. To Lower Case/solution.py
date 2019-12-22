@@ -8,4 +8,3 @@ class Solution:
             else:
                 lower += s
         return lower
-

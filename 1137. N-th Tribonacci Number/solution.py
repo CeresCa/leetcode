@@ -7,4 +7,3 @@ class Solution:
         for i in range(3, i + 1):
             a, b, c = b, c, a + b + c
         return c
-

@@ -16,4 +16,3 @@ class Solution:
             else:
                 opened -= 1
         return "".join(result)
-

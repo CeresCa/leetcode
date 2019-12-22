@@ -4,7 +4,7 @@ class Solution:
 
     # Just a trick
     # def removeDuplicates(self, nums):
-    #     # Use nums[:] instead of nums 
+    #     # Use nums[:] instead of nums
     #     # such that the array can be modified inplace
     #     nums[:] = sorted(set(nums))
     #     return len(nums)

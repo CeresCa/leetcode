@@ -1,5 +1,4 @@
 class KthLargest:
-
     def __init__(self, k: int, nums: List[int]):
         self.k = k
         heapq.heapify(nums)
@@ -13,7 +12,6 @@ class KthLargest:
         elif val > self.nums[0]:
             heapq.heapreplace(self.nums, val)
         return self.nums[0]
-        
 
 
 # Your KthLargest object will be instantiated and called as such:

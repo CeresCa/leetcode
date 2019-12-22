@@ -5,7 +5,10 @@ class Solution:
     def isIsomorphic(self, s, t):
         sourceMap, targetMap = dict(), dict()
         for i in range(len(s)):
-            source, target = sourceMap.get(t[i]), targetMap.get(s[i])  # use dict().get() instead of index
+            source, target = (
+                sourceMap.get(t[i]),
+                targetMap.get(s[i]),
+            )  # use dict().get() instead of index
             if source is None and target is None:
                 sourceMap[t[i]], targetMap[s[i]] = s[i], t[i]
             elif source != s[i] or target != t[i]:

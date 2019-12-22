@@ -1,10 +1,9 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         from collections import deque
+
         stack = deque()
-        par = {')': '(',
-               ']': '[',
-               '}': '{'}
+        par = {")": "(", "]": "[", "}": "{"}
         values = par.values()
         keys = par.keys()
 

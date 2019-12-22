@@ -1,6 +1,6 @@
 class Solution:
-    def longestCommonPrefix(self, strs: 'List[str]') -> 'str':
-        '''有多种解法：水平扫描、垂直扫描、分治、二分查找等'''
+    def longestCommonPrefix(self, strs: "List[str]") -> "str":
+        """有多种解法：水平扫描、垂直扫描、分治、二分查找等"""
         res = ""
         if strs == []:
             return ""

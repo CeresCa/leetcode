@@ -16,4 +16,3 @@ class Solution:
         node.left = self.constructMaximumBinaryTree(nums[:index])
         node.right = self.constructMaximumBinaryTree(nums[index + 1 :])
         return node
-

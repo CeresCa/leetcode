@@ -9,9 +9,7 @@ class Solution:
         for n in nums:
             bucket[n] += 1
         res = []
-        for i, v in enumerate(bucket, min(min(nums),0)):
+        for i, v in enumerate(bucket, min(min(nums), 0)):
             if v > 0:
-              res.append(i)
+                res.append(i)
         return res[:k]
-
-

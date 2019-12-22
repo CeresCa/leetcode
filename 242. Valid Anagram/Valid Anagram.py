@@ -13,8 +13,8 @@ class Solution:
             return False
         counts = [0 for i in range(26)]
         for i in range(0, len(s)):
-            counts[ord(s[i]) - ord('a')] += 1
-            counts[ord(t[i]) - ord('a')] -= 1
+            counts[ord(s[i]) - ord("a")] += 1
+            counts[ord(t[i]) - ord("a")] -= 1
         for i in range(0, 26):
             if counts[i]:
                 return False

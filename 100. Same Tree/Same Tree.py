@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     # @param {TreeNode} p
     # @param {TreeNode} q
@@ -18,7 +19,6 @@ class Solution:
             return False
         else:
             return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
-
 
 
 # Short version:

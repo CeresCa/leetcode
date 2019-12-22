@@ -11,4 +11,3 @@ class Solution:
                 stack.pop()
 
         return "/" + "/".join(stack)
-

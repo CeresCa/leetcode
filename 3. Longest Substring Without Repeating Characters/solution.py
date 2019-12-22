@@ -12,4 +12,3 @@ class Solution:
             used[s[i]] = i
 
         return max(max_len, (len(s) - start))  # 最大长度和最后子串长度比较
-

@@ -23,4 +23,3 @@ class H2O:
             self.h_queue.pop()()
             self.h_queue.pop()()
             self.o_queue.pop()()
-

@@ -1,9 +1,15 @@
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         l = len(nums1) + len(nums2)
-        return self.findKth(nums1, nums2, l // 2) if l % 2 == 1 \
-            else (self.findKth(nums1, nums2, l // 2 - 1) +
-                  self.findKth(nums1, nums2, l // 2)) / 2.0
+        return (
+            self.findKth(nums1, nums2, l // 2)
+            if l % 2 == 1
+            else (
+                self.findKth(nums1, nums2, l // 2 - 1)
+                + self.findKth(nums1, nums2, l // 2)
+            )
+            / 2.0
+        )
 
     def findKth(self, nums1, nums2, k):
         if len(nums1) == 0:
@@ -21,9 +27,9 @@ class Solution:
             if (index1 + index2) >= k:
                 return self.findKth(nums1, nums2[:index2], k)
             else:
-                return self.findKth(nums1[index1 + 1:], nums2, k - index1 - 1)
+                return self.findKth(nums1[index1 + 1 :], nums2, k - index1 - 1)
         else:
             if (index1 + index2) >= k:
                 return self.findKth(nums1[:index1], nums2, k)
             else:
-                return self.findKth(nums1, nums2[index2 + 1:], k - index2 - 1)
+                return self.findKth(nums1, nums2[index2 + 1 :], k - index2 - 1)

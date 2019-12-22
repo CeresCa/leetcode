@@ -25,4 +25,3 @@ class Solution:
 
                 curr.next = l1 or l2
             return merge_head.next
-

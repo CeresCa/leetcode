@@ -5,6 +5,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     # @param {TreeNode} root
     # @return {boolean}
@@ -22,4 +23,6 @@ class Solution:
         if left.val != right.val:
             return False
         else:
-            return self.isMirrror(left.left, right.right) and self.isMirrror(left.right, right.left)
+            return self.isMirrror(left.left, right.right) and self.isMirrror(
+                left.right, right.left
+            )
