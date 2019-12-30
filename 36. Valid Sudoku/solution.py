@@ -1,7 +1,5 @@
 class Solution:
-    # @param {character[][]} board
-    # @return {boolean}
-    def isValidSudoku(self, board):
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
         return (
             self.isValidRow(board)
             and self.isValidColumn(board)
